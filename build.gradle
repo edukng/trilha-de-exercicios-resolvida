@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.thoughtworks.gauge.gradle:gauge-gradle-plugin:+'
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'gauge'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.thoughtworks.gauge:gauge-java:+'
+}
+
+gauge {
+    specsDir = 'enunciados'
+}
