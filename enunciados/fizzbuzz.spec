@@ -41,7 +41,19 @@ String maisUmNumero = Objects.toString(5); // maisUmNumero == "5"
 
 ```
 
-## Numeros divisiveis por 3
+## Traduz numeros divisiveis por 3 para Fizz
 
-* Traduz "3" para Fizz
+* Traduz "3" para "Fizz"
+* Traduz "6" para "Fizz"
+* Traduz "12" para "Fizz"
+
+## Traduz numeros divisiveis por 5 para Buzz
+
+* Traduz "5" para "Buzz"
+
+## Traduz numeros divisiveis por 3 e por 5 para FizzBuzz
+
+* Traduz "15" para "FizzBuzz"
+* Traduz "30" para "FizzBuzz"
+* Traduz "45" para "FizzBuzz"
 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+readonly GAUGE_PATH=$PWD/.gauge-runner
+readonly gauge_cmd="$GAUGE_PATH/gauge"
+
+mkdir -p ${GAUGE_PATH}
+
+if [ -z "$PWD/.gauge-runner/gauge" ]; then
+    echo "  >> Instalando Gauge..."
+    curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=${GAUGE_PATH}
+fi
+
+echo ""
+echo "  >> Executando testes..."
+echo ""
+
+${gauge_cmd} telemetry off
+${gauge_cmd} run enunciados

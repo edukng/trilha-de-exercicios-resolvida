@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z reports/html-report/index.html ]; then
+   echo "Nenhum resultado de teste. Execute os testes primeiro com ./executar" 
+else
+    xdg-open reports/html-report/index.html
+fi
+
+

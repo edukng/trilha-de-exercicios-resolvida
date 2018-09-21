@@ -14,8 +14,9 @@ public class TradutorFizzBuzzTest {
         tradutor = new TradutorFizzBuzz();
     }
 
-    @Step("Traduz <numero> para Fizz")
-    public void trafuzNumerosFizzCorretamente(int numero) {
-        assertThat(tradutor.traduz(numero)).isEqualTo("Fizz");
+    @Step("Traduz <numero> para <traducao>")
+    public void traduzNumerosFizzCorretamente(int numero, String traducao) {
+
+        assertThat(tradutor.traduz(numero)).isEqualTo(traducao);
     }
 }
