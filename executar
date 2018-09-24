@@ -1,6 +1,7 @@
 #!/bin/bash
 
 readonly GAUGE_PATH=$PWD/.gauge-runner
+readonly REPORT_PATH=$PWD/reports/html-report/index.html
 readonly gauge_cmd="$GAUGE_PATH/gauge"
 
 mkdir -p ${GAUGE_PATH}
@@ -16,3 +17,5 @@ echo ""
 
 ${gauge_cmd} telemetry off
 ${gauge_cmd} run enunciados
+
+xdg-open ${REPORT_PATH}
