@@ -1,6 +1,19 @@
 apply plugin: 'idea'
 apply plugin: 'java'
 
+ext {
+    temas = [
+            'logica',
+            'introducao'
+    ]
+
+    dificuldades = [
+            'facil',
+            'medio',
+            'dificil'
+    ]
+}
+
 repositories {
     mavenCentral()
 }
@@ -9,8 +22,12 @@ dependencies {
     compile 'com.thoughtworks.gauge:gauge-java:+'
 }
 
-task runGauge(type: Exec) {
-    commandLine "$rootDir/executar"
+task relatorio(type: Exec, dependsOn: 'test') {
+    commandLine "$rootDir/gaugew", "run", "--tags", "\"${(temas + dificuldades).join("|")}\"" , "enunciados"
 }
 
-test.finalizedBy(runGauge)
+task exibeResultado(type: Exec) {
+    commandLine "xdg-open", "$rootDir/reports/html-report/index.html"
+}
+
+relatorio.finalizedBy(exibeResultado)

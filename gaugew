@@ -1,7 +1,6 @@
 #!/bin/bash
 
 readonly GAUGE_PATH="$PWD/.gauge-runner"
-readonly REPORT_PATH="$PWD/reports/html-report/index.html"
 readonly REPORT_TEMPLATE_PATH="$PWD/report-templates/html-report-4.0.6-linux.x86_64.zip"
 readonly gauge_cmd="$GAUGE_PATH/gauge"
 
@@ -15,12 +14,14 @@ if [ ! -f ${gauge_cmd} ]; then
     curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=${GAUGE_PATH}
 fi
 
-echo ""
-echo "  >> Executando testes..."
-echo ""
 
 ${gauge_cmd} telemetry off
-${gauge_cmd} install html-report --file ${REPORT_TEMPLATE_PATH}
-${gauge_cmd} run enunciados
 
-xdg-open ${REPORT_PATH}
+
+if [ ! -d "$HOME/.gauge/plugins/html-report" ]; then
+    ${gauge_cmd} install html-report --file ${REPORT_TEMPLATE_PATH}
+fi
+
+echo $@
+
+${gauge_cmd} $@

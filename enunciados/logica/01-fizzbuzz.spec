@@ -1,4 +1,6 @@
-# O Tradutor Fizz Buzz
+# 01: O Tradutor Fizz Buzz
+
+  Tags: facil, logica
 
 O problema:
 
@@ -57,3 +59,7 @@ String maisUmNumero = Objects.toString(5); // maisUmNumero == "5"
 * Ao receber "30" deve retornar "FizzBuzz"
 * Ao receber "45" deve retornar "FizzBuzz"
 
+## Traduz numeros que nao sao diviseis para o proprio numero em forma de String
+
+* Ao receber "7" deve retornar "7"
+* Ao receber "2" deve retornar "2"

@@ -1,6 +1,7 @@
 package com.thoughtworks.aceleradora;
 
 import com.thoughtworks.gauge.BeforeStep;
+import com.thoughtworks.gauge.ContinueOnFailure;
 import com.thoughtworks.gauge.Step;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,6 +16,7 @@ public class TradutorFizzBuzzTest {
     }
 
     @Step("Ao receber <numero> deve retornar <traducao>")
+    @ContinueOnFailure
     public void traduzNumerosFizzCorretamente(int numero, String traducao) {
 
         assertThat(tradutor.traduz(numero))
