@@ -43,17 +43,17 @@ String maisUmNumero = Objects.toString(5); // maisUmNumero == "5"
 
 ## Traduz numeros divisiveis por 3 para Fizz
 
-* Traduz "3" para "Fizz"
-* Traduz "6" para "Fizz"
-* Traduz "12" para "Fizz"
+* Ao receber "3" deve retornar "Fizz"
+* Ao receber "6" deve retornar "Fizz"
+* Ao receber "12" deve retornar "Fizz"
 
 ## Traduz numeros divisiveis por 5 para Buzz
 
-* Traduz "5" para "Buzz"
+* Ao receber "5" deve retornar "Buzz"
 
 ## Traduz numeros divisiveis por 3 e por 5 para FizzBuzz
 
-* Traduz "15" para "FizzBuzz"
-* Traduz "30" para "FizzBuzz"
-* Traduz "45" para "FizzBuzz"
+* Ao receber "15" deve retornar "FizzBuzz"
+* Ao receber "30" deve retornar "FizzBuzz"
+* Ao receber "45" deve retornar "FizzBuzz"
 

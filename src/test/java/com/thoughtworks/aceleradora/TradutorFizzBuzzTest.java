@@ -14,9 +14,15 @@ public class TradutorFizzBuzzTest {
         tradutor = new TradutorFizzBuzz();
     }
 
-    @Step("Traduz <numero> para <traducao>")
+    @Step("Ao receber <numero> deve retornar <traducao>")
     public void traduzNumerosFizzCorretamente(int numero, String traducao) {
 
-        assertThat(tradutor.traduz(numero)).isEqualTo(traducao);
+        assertThat(tradutor.traduz(numero))
+                .as("Ao receber %d o tradutor retorna \"%s\", quando deveria estar retornando \"%s\"",
+                        numero,
+                        tradutor.traduz(numero),
+                        traducao
+                )
+                .isEqualTo(traducao);
     }
 }
