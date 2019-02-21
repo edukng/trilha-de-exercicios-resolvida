@@ -22,12 +22,10 @@ dependencies {
     compile 'com.thoughtworks.gauge:gauge-java:+'
 }
 
-task relatorio(type: Exec, dependsOn: 'test') {
+task testes(type: Exec, dependsOn: 'test') {
     commandLine "$rootDir/gaugew", "run", "--tags", "\"${(temas + dificuldades).join("|")}\"" , "enunciados"
 }
 
-task exibeResultado(type: Exec) {
+task relatorio(type: Exec) {
     commandLine "$rootDir/relatorio"
 }
-
-relatorio.finalizedBy(exibeResultado)
