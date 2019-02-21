@@ -27,7 +27,7 @@ task relatorio(type: Exec, dependsOn: 'test') {
 }
 
 task exibeResultado(type: Exec) {
-    commandLine "xdg-open", "$rootDir/reports/html-report/index.html"
+    commandLine "$rootDir/relatorio"
 }
 
 relatorio.finalizedBy(exibeResultado)

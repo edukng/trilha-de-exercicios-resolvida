@@ -1,7 +1,8 @@
 #!/bin/bash
 
 readonly GAUGE_PATH="$PWD/.gauge-runner"
-readonly REPORT_TEMPLATE_PATH="$PWD/report-templates/html-report-4.0.6-linux.x86_64.zip"
+readonly LINUX_TEMPLATE_PATH="$PWD/report-templates/html-report-4.0.6-linux.x86_64.zip"
+readonly DARWIN_TEMPLATE_PATH="$PWD/report-templates/html-report-4.0.6-darwin.x86_64.zip"
 readonly gauge_cmd="$GAUGE_PATH/gauge"
 
 mkdir -p ${GAUGE_PATH}
@@ -19,7 +20,13 @@ ${gauge_cmd} telemetry off
 
 
 if [ ! -d "$HOME/.gauge/plugins/html-report" ]; then
-    ${gauge_cmd} install html-report --file ${REPORT_TEMPLATE_PATH}
+
+  if [ "$(uname)" = "Darwin" ]; then
+    ${gauge_cmd} install html-report --file ${DARWIN_TEMPLATE_PATH}
+  else
+    ${gauge_cmd} install html-report --file ${LINUX_TEMPLATE_PATH}
+  fi
+
 fi
 
 echo $@
