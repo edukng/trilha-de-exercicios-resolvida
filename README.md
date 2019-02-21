@@ -36,8 +36,9 @@ Gerar o relatório com o resultado dos testes:
 __Terceiro passo: Veja o código__
 
 Depois de ver quais são os exercícios disponíveis, navegue pela estrutura do projeto para encontrar o código que precisa ser alterado para
-resolver cada exercício. Dê um olhada dentro da pasta `src/main/java`. Se quiser, aventure-se também na pasta `src/test/java`, mas __não
-altere nada lá__.
+resolver cada exercício. Dê um olhada dentro da pasta `src/main/java`.
+
+> Se quiser, aventure-se também na pasta `src/test/java`, mas __não altere nada lá__.
 
 __Quarto passo: Implemente suas soluções__
 
