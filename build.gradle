@@ -4,7 +4,8 @@ apply plugin: 'java'
 ext {
     temas = [
             'logica',
-            'introducao'
+            'introducao',
+            'oo'
     ]
 
     dificuldades = [
@@ -29,3 +30,5 @@ task testes(type: Exec, dependsOn: 'test') {
 task relatorio(type: Exec) {
     commandLine "$rootDir/relatorio"
 }
+
+relatorio.mustRunAfter(testes)

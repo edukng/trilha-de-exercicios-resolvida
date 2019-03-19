@@ -1,5 +1,4 @@
-package com.thoughtworks.aceleradora;
-
+package com.thoughtworks.aceleradora.logica;
 
 import com.thoughtworks.gauge.BeforeStep;
 import com.thoughtworks.gauge.ContinueOnFailure;

@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora;
+package com.thoughtworks.aceleradora.logica;
 
 public class IdentificadorDeArmstrong {
 
