@@ -53,3 +53,8 @@ Se preferir ler o relatório no browser, execute também:
 ```
 ./gradlew relatorio
 ```
+
+## Selecionar temas e dificuldades
+
+Os exercícios possuem diversos temas e diferentes níveis de dificuldades. Para filtrar quais exercícios serão executados,
+altere o arquivo `build.gradle`.

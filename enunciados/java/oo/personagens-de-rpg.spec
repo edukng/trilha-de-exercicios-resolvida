@@ -13,6 +13,8 @@ informações que estão detalhadas:
 
 __Dica: Utilize métodos setters para configurar os atributos necessários__
 
+Caso queira testar seu código manualmente, utilize a classe `TesteRpg`
+
 ## Personagem de Defesa
 
     Implemente o método `criarPersonagemDeDefesa` de modo que este retorne um personagem que cumpra com os seguintes
