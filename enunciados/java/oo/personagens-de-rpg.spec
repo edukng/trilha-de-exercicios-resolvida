@@ -6,9 +6,12 @@ A ideia deste exercício é que você possa entender e praticar mais sobre a rel
 programa Java.
 
 Seu objetivo será implementar a lógica dos métodos da classe `CriadorDePersonagem`. Esta classe é responsável por criar
-novos personagens para um jogo de RPG. Cada tipo de personagem possui caracteristicas distintas, bem como arma e
-armadura. Abaixo estão os detalhes de cada personagem e seu papel será implementar o código que crie cada um deles
-seguindo as informações que estão detalhadas:
+novos personagens para um jogo de RPG. Cada personagem possui atributos e equipamentos distintos.
+
+Abaixo estão os detalhes de cada personagem e seu papel será implementar o código que crie cada um deles seguindo as
+informações que estão detalhadas:
+
+__Dica: Utilize métodos setters para configurar os atributos necessários__
 
 ## Personagem de Defesa
 
