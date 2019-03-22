@@ -1,4 +1,4 @@
-# 01: O Tradutor Fizz Buzz
+# O Tradutor Fizz Buzz
 
   Tags: facil, logica
 

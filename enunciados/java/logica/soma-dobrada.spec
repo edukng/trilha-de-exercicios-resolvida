@@ -1,4 +1,4 @@
-# 03: Soma dobrada
+# Soma dobrada
 
   Tags: facil, logica
 
@@ -15,9 +15,9 @@ implementação deve considerar as seguintes regras:
 
 ## Casos de teste
 
-* Quando a entrada for "1" e "2", a saida deve ser "3"
-* Quando a entrada for "3" e "2", a saida deve ser "5"
-* Quando a entrada for "2" e "2", a saida deve ser "8"
-* Quando a entrada for "7" e "7", a saida deve ser "28"
-* Quando a entrada for "3" e "-3", a saida deve ser "-1"
+    * Quando a entrada for "1" e "2", a saida deve ser "3"
+    * Quando a entrada for "3" e "2", a saida deve ser "5"
+    * Quando a entrada for "2" e "2", a saida deve ser "8"
+    * Quando a entrada for "7" e "7", a saida deve ser "28"
+    * Quando a entrada for "3" e "-3", a saida deve ser "-1"
 
