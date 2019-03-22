@@ -7,10 +7,18 @@ public class Arma {
     private int bonusDeAtaque;
 
     public String getNome() {
-        return "";
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getBonusDeAtaque() {
         return bonusDeAtaque;
+    }
+
+    public void setBonusDeAtaque(int bonusDeAtaque) {
+        this.bonusDeAtaque = bonusDeAtaque;
     }
 }
