@@ -1,6 +1,6 @@
 # Conversor de moedas
 
-  Tags: medio, oo
+  Tags: dificil, oo
 
 Crie uma aplicação que converta valores de uma moeda para outra.
 
