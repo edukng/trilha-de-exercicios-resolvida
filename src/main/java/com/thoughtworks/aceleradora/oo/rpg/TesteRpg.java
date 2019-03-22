@@ -4,7 +4,7 @@ public class TesteRpg {
 
     public static void main(String[] args) {
 
-        Personagem personagem = new Personagem();
+        CriadorDePersonagens criadorDePersonagens = new CriadorDePersonagens();
 
     }
 }

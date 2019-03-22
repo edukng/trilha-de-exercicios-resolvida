@@ -19,18 +19,6 @@ public class Personagem {
         this.nome = nome;
     }
 
-    public int getAtaque() {
-        return 0;
-    }
-
-    public int getDefesa() {
-        return 0;
-    }
-
-    public int getLabia() {
-        return 0;
-    }
-
     public int getForca() {
         return forca;
     }

@@ -31,4 +31,5 @@ task relatorio(type: Exec) {
     commandLine "$rootDir/relatorio"
 }
 
-relatorio.mustRunAfter(testes)
+testes.finalizedBy(relatorio)
+

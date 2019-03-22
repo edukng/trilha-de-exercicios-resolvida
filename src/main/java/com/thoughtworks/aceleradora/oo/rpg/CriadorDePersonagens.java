@@ -3,7 +3,6 @@ package com.thoughtworks.aceleradora.oo.rpg;
 public class CriadorDePersonagens {
 
     public Personagem criarPersonagemDeDefesa() {
-
         return null;
     }
 
