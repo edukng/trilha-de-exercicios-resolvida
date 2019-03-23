@@ -8,11 +8,23 @@ carro da vida real.
 
 ## Modele a classe Carro
 
-  Altere o código a classe Carro adicionando os seguintes atributos:
+Altere o código da classe Carro adicionando os seguintes atributos:
 
 * Adicione à classe carro o atributo "marca" do tipo "String"
 * Adicione à classe carro o atributo "modelo" do tipo "String"
 * Adicione à classe carro o atributo "ano" do tipo "int"
+
+Depois, crie métodos de acesso para estes atributos (getters):
+
+* Adicione à classe carro um método getter para o atributo "marca"
+* Adicione à classe carro um método getter para o atributo "modelo"
+* Adicione à classe carro um método getter para o atributo "ano"
+
+Depois, crie métodos de escrita para estes atributos (setters):
+
+* Adicione à classe carro um método setter para o atributo "marca"
+* Adicione à classe carro um método setter para o atributo "modelo"
+* Adicione à classe carro um método setter para o atributo "ano"
 
  Crie objetos do tipo Carro
 
