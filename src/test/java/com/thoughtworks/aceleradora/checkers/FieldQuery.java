@@ -26,7 +26,7 @@ public class FieldQuery<T> {
     }
 
     private FieldQuery(ClassDigger<T> classDigger) {
-       this.digger = classDigger;
+        this.digger = classDigger;
     }
 
     public static <R> FieldQuery query(Class<R> target) {
@@ -37,7 +37,7 @@ public class FieldQuery<T> {
         return new FieldQuery<>(digger, fieldName);
     }
 
-    public FieldQuery<T> withType(String type) {
+    public FieldQuery<T> type(String type) {
         return new FieldQuery<>(digger, name, type);
     }
 

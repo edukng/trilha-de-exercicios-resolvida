@@ -12,7 +12,7 @@ public class CarroTest {
     public void carroPossuiAtributoEsperado(String atributo, String tipo) {
         query(Carro.class)
                 .field(atributo)
-                .withType(tipo)
+                .type(tipo)
                 .check();
 
     }
