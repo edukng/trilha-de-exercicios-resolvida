@@ -15,8 +15,7 @@ public class CarroTest {
         query(Carro.class)
                 .field(field -> field
                         .name(atributo)
-                        .type(tipo)
-                )
+                        .type(tipo))
                 .check();
     }
 
