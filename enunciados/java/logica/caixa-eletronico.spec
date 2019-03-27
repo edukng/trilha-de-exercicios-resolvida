@@ -13,10 +13,14 @@ __Notas disponíveis: 50, 20__
 
 * Quando o valor do saque for "50", o caixa deve entregar "50"
 * Quando o valor do saque for "20", o caixa deve entregar "20"
+* Quando o valor do saque for "60", o caixa deve entregar "20, 20, 20"
 * Quando o valor do saque for "70", o caixa deve entregar "50, 20"
+* Quando o valor do saque for "80", o caixa deve entregar "20, 20, 20, 20"
 * Quando o valor do saque for "90", o caixa deve entregar "50, 20, 20"
+* Quando o valor do saque for "100", o caixa deve entregar "50, 50"
 * Quando o valor do saque for "110", o caixa deve entregar "50, 20, 20, 20"
 * Quando o valor do saque for "120", o caixa deve entregar "50, 50, 20"
+* Quando o valor do saque for "140", o caixa deve entregar "50, 50, 20, 20"
 
 * Quando o valor do saque for "10", o caixa deve lançar exceção com mensagem "Valor invalido"
 * Quando o valor do saque for "25", o caixa deve lançar exceção com mensagem "Valor invalido"
