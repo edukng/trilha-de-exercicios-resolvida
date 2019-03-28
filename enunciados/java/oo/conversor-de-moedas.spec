@@ -96,4 +96,4 @@ __Casos de teste__
 ## Deve informar usuário quando a moeda utilizada não for suportada
 
 * Ao receber "USD100 BRL" deve retornar mensagem "Moeda nao suportada: USD"
-* Ao receber "CLP1000 GBP" deve retornar mensagem "Moeda nao suporotada: GBP"
+* Ao receber "CLP1000 GBP" deve retornar mensagem "Moeda nao suportada: GBP"
