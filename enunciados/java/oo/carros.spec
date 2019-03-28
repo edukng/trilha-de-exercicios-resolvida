@@ -26,8 +26,12 @@ Depois, crie métodos de escrita para estes atributos (setters):
 * Adicione à classe carro um método setter para o atributo "modelo"
 * Adicione à classe carro um método setter para o atributo "ano"
 
- Crie objetos do tipo Carro
+## Crie um objeto do tipo Carro
 
   Na classe `CriadorDeCarro` você deve implementar a lógica do método `criaUmCarro` para que este retorne um novo objeto
   do tipo carro que possua as seguintes características:
+
+  * A marca do carro deve ser "Ford"
+  * O modelo do carro deve ser "Mustang"
+  * O ano do carro deve ser "2017"
 
