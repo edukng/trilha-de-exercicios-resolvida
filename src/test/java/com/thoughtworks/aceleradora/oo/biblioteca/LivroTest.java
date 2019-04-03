@@ -47,6 +47,22 @@ public class LivroTest {
                 .check();
     }
 
+    @Step("A classe livro deve ter o método getTitulo")
+    @ContinueOnFailure
+    public void mustHaveGetTitulo() {
+        query(Livro.class)
+                .method(getterFor("titulo"))
+                .check();
+    }
+
+    @Step("A classe livro deve ter o método setTitulo")
+    @ContinueOnFailure
+    public void mustHaveSetTitulo() {
+        query(Livro.class)
+                .method(setterFor("titulo"))
+                .check();
+    }
+
     @Step("A classe livro deve ter o método getAnoDeLancamento")
     @ContinueOnFailure
     public void mustHaveGetAnoDeLancamento() {

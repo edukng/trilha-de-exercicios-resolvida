@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Livro {
 
+    private String titulo;
     private int anoDeLancamento;
     private List<Autor> autores;
     private List<Formato> formatos;
