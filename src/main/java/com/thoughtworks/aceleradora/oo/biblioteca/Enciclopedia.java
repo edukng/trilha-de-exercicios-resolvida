@@ -11,7 +11,23 @@ public class Enciclopedia {
         // Adicione os livros aqui
     }
 
-    public Livro getEnesimoLivro(int posicao) {
+    public String tituloDoEnesimoLivro(int posicao) {
+        return null;
+    }
+
+    public List<Livro> livrosDisponiveisEmPdf() {
+        return null;
+    }
+
+    public List<Livro> buscaPorAutora(String nomeCompleto) {
+        return null;
+    }
+
+    public List<Livro> buscaPorAnoDeLancamento(int ano) {
+        return null;
+    }
+
+    public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
         return null;
     }
 
