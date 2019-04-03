@@ -22,7 +22,7 @@ public class CaixaEletronicoTest {
 
     @Step("Quando o valor do saque for <valor>, o caixa deve entregar <notas>")
     @ContinueOnFailure
-    public void shouldDeliverCorrectBills(int valor, String notas) {
+    public void shouldDeliverCorrectBills(int valor, String notas) throws Exception {
         List<Integer> notasEsperadas = Stream
                 .of(notas.split(","))
                 .map(String::trim)
@@ -35,7 +35,7 @@ public class CaixaEletronicoTest {
 
     @Step("Quando o valor do saque for <valor>, o caixa deve lançar exceção com mensagem <mensagem>")
     @ContinueOnFailure
-    public void shouldFailWhenAskedForInvalidValue(int valor, String mensagem) {
+    public void shouldFailWhenAskedForInvalidValue(int valor, String mensagem) throws Exception {
         assertThatThrownBy(() -> caixaEletronico.sacar(valor)).hasMessage(mensagem);
     }
 
