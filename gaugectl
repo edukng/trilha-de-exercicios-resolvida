@@ -1,0 +1,72 @@
+#!/bin/bash
+
+readonly MANIFEST_NAME="manifest.json"
+
+inject_manifest() {
+  local LANGUAGE_PLACEHOLDER="__lang__"
+  local LANGUAGE=${1:-"java"}
+  local TARGET_LOCATION=${2:-$PWD}
+
+
+  MANIFEST_TEMPLATE=$(
+    cat <<-EOM
+{
+  "Language": "${LANGUAGE_PLACEHOLDER}",
+  "Plugins": [
+    "html-report"
+  ]
+}
+EOM
+  )
+  echo "${MANIFEST_TEMPLATE//${LANGUAGE_PLACEHOLDER}/${LANGUAGE}}" > "${TARGET_LOCATION}/${MANIFEST_NAME}"
+}
+
+remove_manifest() {
+  local TARGET_LOCATION=${1:-$PWD}
+  rm "${TARGET_LOCATION}/${MANIFEST_NAME}"
+}
+
+gauge_run() {
+  local TARGET_LANG=${1:-"java"}
+  ./gaugew run --env "${TARGET_LANG}"
+}
+
+report_path() {
+  printf "%s/reports/html-report/index.html" "${PWD}"
+}
+
+open_report() {
+  local REPORT_PATH=""
+  REPORT_PATH=$(report_path)
+
+  if [ ! -f "$REPORT_PATH" ]; then
+    echo "  >> Relatorio nao existe. execute ./gradlew relatorio"
+    echo "  >>>> Caminho utilizado: ${REPORT_PATH}"
+    exit 1
+  fi
+
+  if [ "$(uname)" = "Darwin" ]; then
+    open "${REPORT_PATH}"
+  else
+    xdg-open "${REPORT_PATH}"
+  fi
+}
+
+case $1 in
+inject-manifest)
+  inject_manifest "$2" "$3"
+  ;;
+remove-manifest)
+  remove_manifest "$2"
+  ;;
+run)
+  gauge_run "$2"
+  ;;
+open-report)
+  open_report
+  ;;
+*)
+  echo "Invalid option"
+  exit 1
+  ;;
+esac
