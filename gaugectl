@@ -1,15 +1,10 @@
-#!/bin/bash
+#!/bin/bash -eu
 
+readonly REPORT_PATH="${PWD}/reports/html-report/index.html"
+readonly LANGUAGE_PLACEHOLDER="__lang__"
 readonly MANIFEST_NAME="manifest.json"
-
-inject_manifest() {
-  local LANGUAGE_PLACEHOLDER="__lang__"
-  local LANGUAGE=${1:-"java"}
-  local TARGET_LOCATION=${2:-$PWD}
-
-
-  MANIFEST_TEMPLATE=$(
-    cat <<-EOM
+readonly MANIFEST_TEMPLATE=$(
+  cat <<-EOM
 {
   "Language": "${LANGUAGE_PLACEHOLDER}",
   "Plugins": [
@@ -17,8 +12,13 @@ inject_manifest() {
   ]
 }
 EOM
-  )
-  echo "${MANIFEST_TEMPLATE//${LANGUAGE_PLACEHOLDER}/${LANGUAGE}}" > "${TARGET_LOCATION}/${MANIFEST_NAME}"
+)
+
+inject_manifest() {
+  local LANGUAGE=${1:-"java"}
+  local TARGET_LOCATION=${2:-$PWD}
+
+  echo "${MANIFEST_TEMPLATE//${LANGUAGE_PLACEHOLDER}/${LANGUAGE}}" >"${TARGET_LOCATION}/${MANIFEST_NAME}"
 }
 
 remove_manifest() {
@@ -31,14 +31,7 @@ gauge_run() {
   ./gaugew run --env "${TARGET_LANG}"
 }
 
-report_path() {
-  printf "%s/reports/html-report/index.html" "${PWD}"
-}
-
 open_report() {
-  local REPORT_PATH=""
-  REPORT_PATH=$(report_path)
-
   if [ ! -f "$REPORT_PATH" ]; then
     echo "  >> Relatorio nao existe. execute ./gradlew relatorio"
     echo "  >>>> Caminho utilizado: ${REPORT_PATH}"
