@@ -1,1 +1,1 @@
-module.exports = () => "Hello";
+module.exports = (saudacao) => `${saudacao}, mundo`;
