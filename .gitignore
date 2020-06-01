@@ -5,16 +5,6 @@ logs
 gauge_bin
 reports
 
-# Gauge reports
-src/java/.gauge
-src/java/gauge_bin
-src/java/logs
-src/java/reports
-src/javascript/.gauge
-src/javascript/gauge_bin
-src/javascript/logs
-src/javascript/reports
-
 # Generated files
 manifest.json
 
