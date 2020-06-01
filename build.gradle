@@ -39,16 +39,62 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}"
     compile "org.flywaydb:flyway-core"
     compile "org.postgresql:postgresql:42.2.5"
-
 }
 
-task testes(type: Exec, dependsOn: 'test') {
-    commandLine "$rootDir/gaugew", "run", "--tags", "\"${(temas + dificuldades).join("|")}\"" , "enunciados"
+sourceSets {
+    main {
+        java {
+            srcDirs = [
+                    "$rootDir/src/java/main",
+                    "$rootDir/src/javascript/main"
+            ]
+        }
+    }
+
+    test {
+        java {
+            srcDirs = [
+                    "$rootDir/src/java/test",
+                    "$rootDir/src/javascript/test",
+            ]
+        }
+    }
 }
 
-task relatorio(type: Exec) {
-    commandLine "$rootDir/relatorio"
+private def gaugeControl(Exec task, List<String> params) {
+    task.commandLine = ["$rootDir/gaugectl"] + params
 }
 
-testes.finalizedBy(relatorio)
+task injectManifestJs(type: Exec) {
+    gaugeControl delegate, ["inject-manifest", "js", rootDir]
+}
+
+task injectManifestJava(type: Exec) {
+    gaugeControl delegate, ["inject-manifest", "java", rootDir]
+}
+
+task runJsSpecs(type: Exec) {
+    gaugeControl delegate, ["run", "javascript"]
+}
+
+task runJavaSpecs(type: Exec) {
+    gaugeControl delegate, ["run", "java"]
+}
+
+task deleteManifest(type: Exec) {
+    gaugeControl delegate, ["remove-manifest", rootDir]
+}
+
+task openReport(type: Exec, dependsOn: 'deleteManifest') {
+    gaugeControl delegate, ["open-report"]
+}
+
+task testeJava(dependsOn: 'injectManifestJava')
+task testeJs(dependsOn: 'injectManifestJs')
+
+testeJava.finalizedBy(runJavaSpecs)
+runJavaSpecs.finalizedBy(openReport)
+
+testeJs.finalizedBy(runJsSpecs)
+runJsSpecs.finalizedBy(openReport)
 

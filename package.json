@@ -1,0 +1,17 @@
+{
+  "name": "trilha-de-exercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "src/javascript/test"
+  },
+  "scripts": {
+    "test": "echo \"Testes devem ser executados atraves do Gauge: ./inject-manifest js && ./gaugew run --env javascript\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}

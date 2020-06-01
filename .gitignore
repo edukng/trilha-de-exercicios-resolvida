@@ -5,13 +5,20 @@ logs
 gauge_bin
 reports
 
-# IntelliJ
+# Generated files
+manifest.json
 
+# IntelliJ
 out/
 .idea
 *.iml
 
 # Gradle
-
 .gradle
 build/
+
+# Vim
+*.swp
+
+# Npm
+node_modules
