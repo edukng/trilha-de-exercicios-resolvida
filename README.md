@@ -23,6 +23,8 @@ Para executar os enunciados de Javascript:
 ./gradlew testeJs
 ```
 
+**Caso esteja usando Windows, você deve rodar os comandos sem ```./```**
+
 Seu objetivo é fazer com que estes testes passem. Antes de tentar resolver qualquer problema, tome uns minutos para familiarizar-se com o
 terminal. Tente interpretar todas as mensagens de erro que aparecem na tela. Não se preocupe se nada ficar claro num primeiro momento, a
 única regra é __não temer o terminal nem suas mensagens de erro__. Sempre tente interpretar o que está acontecendo.
