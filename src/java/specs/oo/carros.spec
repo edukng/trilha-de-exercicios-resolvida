@@ -28,7 +28,8 @@ Depois, crie métodos de escrita para estes atributos (setters):
 
 ## Crie um objeto do tipo Carro
 
-  Na classe `CriadorDeCarro` você deve implementar a lógica do método `criaUmCarro` para que este retorne um novo objeto
+  Na classe `CriadorDeCarro` você deve implementar a lógica do método
+  `criaUmCarro` para que este retorne um novo objeto
   do tipo carro que possua as seguintes características:
 
   * A marca do carro deve ser "Ford"

@@ -46,6 +46,6 @@ public class CriadorDeCarroTest {
 
         assertThat(carro)
                 .extracting(attribute)
-                .isEqualTo(singletonList(value));
+                .isEqualTo(value);
     }
 }

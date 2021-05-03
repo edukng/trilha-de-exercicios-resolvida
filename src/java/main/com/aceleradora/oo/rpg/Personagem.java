@@ -11,6 +11,7 @@ public class Personagem {
     private Arma arma;
     private Armadura armadura;
 
+
     public String getNome() {
         return nome;
     }
@@ -66,5 +67,6 @@ public class Personagem {
     public void setArmadura(Armadura armadura) {
         this.armadura = armadura;
     }
+
 
 }

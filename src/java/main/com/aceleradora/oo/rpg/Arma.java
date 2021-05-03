@@ -2,6 +2,7 @@ package com.aceleradora.oo.rpg;
 
 public class Arma {
 
+
     private String nome;
 
     private int bonusDeAtaque;
@@ -21,4 +22,6 @@ public class Arma {
     public void setBonusDeAtaque(int bonusDeAtaque) {
         this.bonusDeAtaque = bonusDeAtaque;
     }
+
 }
+
