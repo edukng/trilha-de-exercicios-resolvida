@@ -8,6 +8,7 @@ public class Enciclopedia {
     private List<Livro> livros = new ArrayList<>();
 
     public Enciclopedia() {
+
         Livro primeiroLivro = new Livro();
         Autor chimamanda = new Autor("Chimamanda","Adichie");
         primeiroLivro.setTitulo("Sejamos todos feministas");
@@ -96,9 +97,15 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        if(ano == 2017){
-            return livros[1];
+        List<Livro> livrosPorAno = new ArrayList<>();
+        for (Livro livroAux: livros) {
+            if(livroAux.getAnoDeLancamento() == ano){
+                livrosPorAno.add(livroAux);
+            }
         }
+        return livrosPorAno;
+
+
 
     }
 
