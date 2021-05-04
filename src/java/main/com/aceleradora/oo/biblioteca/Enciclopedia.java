@@ -89,11 +89,45 @@ public class Enciclopedia {
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        return null;
+//        List<Livro> formatoPdf = new ArrayList<>();
+//        for (Livro formatoAux: livros) {
+//
+//            if(formatoAux.equals(Formato.PDF)){
+//                formatoPdf.add(formatoAux);
+//            }
+//        }
+//        return formatoPdf;
+        List<Livro> livrosEmPdf = new ArrayList<>();
+        for (Livro livroAux: livros) {
+            for (Formato formatoPdf: livroAux.getFormatos()) {
+                if(formatoPdf.equals(Formato.PDF)){
+                    livrosEmPdf.add(livroAux);
+                }
+            }
+        }
+        return livrosEmPdf;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+//        List<Livro> livrosPorAutor = new ArrayList<>();
+//        for(Livro autorAux: livros){
+//            for(Autor nomeDoAutor: autorAux.getAutores()){
+//                if(nomeDoAutor.equals(nomeCompleto)){
+//                    livrosPorAutor.add(autorAux);
+//                }
+//
+//            }
+//        }
+//        return livrosPorAutor;
+        List<Livro> listaChimamanda = new ArrayList<>();
+        for (Livro livroAux: livros) {
+            for (Autor autora: livroAux.getAutores()) {
+                if(autora.toString().equals(nomeCompleto)){
+                    listaChimamanda.add(livroAux);
+                }
+            }
+        }
+        return listaChimamanda;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
@@ -110,7 +144,13 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
-        return null;
+        List<Livro> livrosPorPeriodo = new ArrayList<>();
+        for (Livro livroAux: livros) {
+            if(livroAux.getAnoDeLancamento() >= inicio && livroAux.getAnoDeLancamento() <= fim){
+                livrosPorPeriodo.add(livroAux);
+            }
+        }
+        return livrosPorPeriodo;
     }
 
 }
